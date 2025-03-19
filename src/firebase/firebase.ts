@@ -1,7 +1,10 @@
+// src/firebase/config.ts
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
+// Replace these with your actual Firebase project config
 const firebaseConfig = {
   apiKey: "AIzaSyA2LWzXXNmU7_vRmyQe-O1bCBlvV57aG20",
   authDomain: "authenticati-f2d4a.firebaseapp.com",
@@ -13,7 +16,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// Initialize Firebase Authentication and get a reference to the service
 export const auth = getAuth(app);
+export const db = getFirestore(app);
+
 export default app;
